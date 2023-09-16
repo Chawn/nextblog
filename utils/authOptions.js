@@ -34,6 +34,25 @@ export const authOptions = {
 			},
 		}),
 	],
+	callbacks: {
+		// create or update user if they login via social networks
+		async signIn({ user }) {
+			dbConnect();
+			const { email } = user;
+			let dbUser = await User.findOne({ email });
+			if (!dbUser) {
+				dbUser = await User.create({
+					name: user.name,
+					email: user.email,
+					image: user.image,
+				});
+			}
+			return true;
+
+		},
+ 
+		// add additional user info to the session (jwt, session)
+	},
 	secret: process.env.NEXTAUTH_SECRET,
 	pages: {
 		signIn: '/login',
