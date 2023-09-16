@@ -5,7 +5,6 @@ import toast from 'react-hot-toast';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { signIn } from 'next-auth/react';
 
-
 export default function Login() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
@@ -69,6 +68,12 @@ export default function Login() {
 							{loading ? 'Please wait...' : 'Submit'}
 						</button>
 					</form>
+					<button
+						className='bnt btn-danger mb-4'
+						onClick={() => signIn('google', { callbackUrl })}
+					>
+						Sign in with Google
+					</button>
 				</div>
 			</div>
 		</div>

@@ -33,6 +33,11 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+
+## Course Note
+
+Course Link: [Full Stack React with Next.js 13 NextAuth & Serverless API](https://www.udemy.com/course/nextjs-nextauth-next-api-react/)
+
 1. *`npx create-next-app@latest .`*
 2. *`npm run dev`*
 3. *`npm i bootstrap-material-design`*
