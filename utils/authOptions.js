@@ -48,10 +48,21 @@ export const authOptions = {
 				});
 			}
 			return true;
-
 		},
- 
+
 		// add additional user info to the session (jwt, session)
+		jwt: async ({ token, user }) => {
+			// console.log('jwt callback', token, user);
+			const userByEmail = await User.findOne({ email: token.email });
+			userByEmail.password = undefined;
+			token.user = userByEmail;
+			return token;
+		},
+		session: async ({ session, token }) => {
+			// console.log('session callback', session, token);
+			session.user = token.user;
+			return session;
+		},
 	},
 	secret: process.env.NEXTAUTH_SECRET,
 	pages: {
