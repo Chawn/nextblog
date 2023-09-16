@@ -116,3 +116,6 @@ Course Link: [Full Stack React with Next.js 13 NextAuth & Serverless API](https:
 13. add NEXTAUTH_SECRET to `config.js`, `next.config.js`
 14. create `utils/authOptions.js`
 15. create `api/auth/[...nextauth]/route.js`
+
+
+16. `npm i react-quill`

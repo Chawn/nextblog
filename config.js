@@ -7,7 +7,7 @@ GOOGLE_CLIENT_ID =
 GOOGLE_CLIENT_SECRET = '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';
 
 CLOUDINARY_UPLOAD_PRESET = 'tfwwv1nh';
-CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/dkfqjb4yh/nextblog/uploads';
+CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/dkfqjb4yh/image/upload';
 
 module.exports = {
 	DB_URI,
